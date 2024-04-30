@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 
 const HeroSection: FC = () => {
   return (
-    <section className="flex flex-col sm:flex-row gap-16 p-16 justify-center items-center">
+    <section className="flex flex-col sm:flex-row gap-16 p-12 justify-center items-center">
       <div className="flex flex-col items-start gap-2">
         <p className="text-sm font-semibold bg-[#9FFF00] text-[#07334B] p-1 px-2 rounded-md ">
           #BestSeller
