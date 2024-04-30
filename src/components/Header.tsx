@@ -18,7 +18,7 @@ const Header: FC = () => {
           <h1>
             <img src={logo} alt="Logo" className="h-10" />
           </h1>
-          <ul className="flex gap-3 box-border">
+          <ul className="hidden sm:flex gap-3 box-border">
             {links.map(({ name, href }) => (
               <li key={name} className="p-1">
                 <a
