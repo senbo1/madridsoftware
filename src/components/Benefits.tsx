@@ -2,9 +2,9 @@ import { FC } from 'react';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 import dataExplore from '../assets/data-explore.png';
 
-const Explore: FC = () => {
+const Benefits: FC = () => {
   return (
-    <section className="py-16 px-32 flex flex-col items-center gap-10">
+    <section id="benefits" className="container max-w-6xl py-6 my-16 flex flex-col justify-center items-center gap-10">
       <h2 className="text-[32px] font-bold">
         Explore the Data Analytics Program
       </h2>
@@ -70,4 +70,4 @@ const Explore: FC = () => {
   );
 };
 
-export default Explore;
+export default Benefits;

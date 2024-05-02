@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       fontFamily: {
         dmsans : ["DM Sans", "sans-serif"],
+        barlowc: ["Barlow Condensed", "sans-serif"]
       },
       colors: {
         border: "hsl(var(--border))",

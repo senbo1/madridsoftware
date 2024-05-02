@@ -1,8 +1,10 @@
 import RegisterForm from './components/RegisterForm';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
-import Explore from './components/Explore';
+import Benefits from './components/Benefits';
 import Learning from './components/Learning';
+import MainNav from './components/MainNav';
+import Placements from './components/Placements';
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
         <main>
           <HeroSection />
           <RegisterForm />
-          <Explore />
+          <MainNav /> 
+          <Placements />
+          <Benefits />
           <Learning />
         </main>
       </div>
