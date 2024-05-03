@@ -28,7 +28,7 @@ const Eligible: FC = () => {
             </div>
 
             <div className="flex gap-4">
-              <span className="w-3 h-full bg-blue rounded-lg"></span>
+              <span className="w-2 h-full bg-blue rounded-lg"></span>
               <p className="text-[15px] font-bold">
                 A jobseeker or working professional, seeking to upskill in new
                 technologies
