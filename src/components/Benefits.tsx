@@ -8,7 +8,7 @@ const Benefits: FC = () => {
       <h2 className="text-[32px] font-bold">
         Explore the Data Analytics Program
       </h2>
-      <div className="flex flex-col sm:flex-row gap-14">
+      <div className="sm:flex gap-14">
         <div className="flex flex-col gap-11">
           <p className="text-neutral-400">
             Enroll in Madrid Software's Data Analytics course to master data

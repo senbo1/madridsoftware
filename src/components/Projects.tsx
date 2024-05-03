@@ -6,7 +6,7 @@ import ecommerce from '../assets/ecommerce.png';
 
 const Projects: FC = () => {
   return (
-    <section className="container max-w-6xl py-16 flex flex-col items-center">
+    <section id="projects"className="container max-w-6xl py-16 flex flex-col items-center">
       <h2 className="text-[32px] font-bold mb-16">
         Industry Relevant Projects
       </h2>

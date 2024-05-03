@@ -8,6 +8,7 @@ import Placements from './components/Placements';
 import Enroll from './components/Enroll';
 import Projects from './components/Projects';
 import Eligible from './components/Eligible';
+import Reviews from './components/Reviews';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Enroll />
           <Projects />
           <Eligible />
+          <Reviews />
         </main>
       </div>
     </>
