@@ -3,12 +3,12 @@ import Companies from './Companies';
 
 const Placements: FC = () => {
   return (
-    <section className="container max-w-6xl py-12 my-16 className='text-3xl' flex flex-col items-center gap-16">
+    <section className="container max-w-6xl py-12 my-16 flex flex-col items-center gap-16">
       <h2 className="text-[32px] font-bold tracking-wide">
         <span className="text-gradient">Placement Opportunities </span>That
         You&prime;ll Get With Us
       </h2>
-      <div className="flex flex-col sm:flex-row justify-between gap-12">
+      <div className="flex flex-col sm:flex-row justify-between gap-20">
         <div className="flex flex-col">
           <Companies />
         </div>

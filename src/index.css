@@ -90,6 +90,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+.text-gradient-2 {
+  background: linear-gradient(91.74deg, #82d6ff 1.47%, #b57cff 77.27%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .gradient-2 {
   background: linear-gradient(
     98.97deg,

@@ -4,7 +4,7 @@ import dataExplore from '../assets/data-explore.png';
 
 const Benefits: FC = () => {
   return (
-    <section id="benefits" className="container max-w-6xl py-6 my-16 flex flex-col justify-center items-center gap-10">
+    <section id="benefits" className="container max-w-6xl py-20 flex flex-col justify-center items-center gap-10">
       <h2 className="text-[32px] font-bold">
         Explore the Data Analytics Program
       </h2>
