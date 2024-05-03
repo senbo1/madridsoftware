@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        inset: "-1px 0px 20px 0px #08090A inset;"
+      },
       fontFamily: {
         dmsans : ["DM Sans", "sans-serif"],
         barlowc: ["Barlow Condensed", "sans-serif"]

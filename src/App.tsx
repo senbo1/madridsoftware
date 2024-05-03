@@ -7,6 +7,7 @@ import MainNav from './components/MainNav';
 import Placements from './components/Placements';
 import Enroll from './components/Enroll';
 import Projects from './components/Projects';
+import Eligible from './components/Eligible';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Learning />
           <Enroll />
           <Projects />
+          <Eligible />
         </main>
       </div>
     </>
