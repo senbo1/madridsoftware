@@ -103,8 +103,8 @@ const Reviews: FC = () => {
               <p className="font-bold text-xs text-white/40">
                 Appnox Technologies
               </p>
-              <p className="text-xs text-white/40">(8 LPA)</p>
-              <img src={rating} alt="rating" className="w-32 h-6 mx-auto" />
+              <p className="text-xs text-white/40">(10 LPA)</p>
+              <img src={rating2} alt="rating" className="w-32 h-6 mx-auto" />
               <p className="text-xs mt-4">An amazing experience indeed!</p>
             </div>
           </CarouselItem>
@@ -126,7 +126,7 @@ const Reviews: FC = () => {
                 Comely Enterprises
               </p>
               <p className="text-xs text-white/40">(12 LPA)</p>
-              <img src={rating} alt="rating" className="w-32 h-6 mx-auto" />
+              <img src={rating2} alt="rating" className="w-32 h-6 mx-auto" />
               <p className="text-xs mt-4">
                 Joining Madrid was a game-changer for me. It provided invaluable
                 insights into the real-world landscape of UX design.
