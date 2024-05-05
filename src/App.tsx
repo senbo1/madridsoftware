@@ -11,6 +11,7 @@ import Eligible from './components/Eligible';
 import Reviews from './components/Reviews';
 import FAQs from './components/FAQs';
 import Footer from './components/Footer';
+import Curriculum from './components/Curriculum';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <MainNav /> 
           <Placements />
           <Benefits />
+          <Curriculum />
           <Learning />
           <Enroll />
           <Projects />

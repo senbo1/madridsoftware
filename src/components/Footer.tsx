@@ -8,7 +8,7 @@ import logo from '../assets/logo.svg';
 
 const Footer: FC = () => {
   return (
-    <section className="bg-black py-24">
+    <section className="bg-black pt-24 pb-14">
       <div className="container max-w-7xl">
         <div className="flex flex-col items-center lg:items-start lg:flex-row gap-28">
           <div className="flex flex-col max-w-lg gap-20 order-2 lg:order-none">
