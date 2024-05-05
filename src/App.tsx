@@ -10,6 +10,7 @@ import Projects from './components/Projects';
 import Eligible from './components/Eligible';
 import Reviews from './components/Reviews';
 import FAQs from './components/FAQs';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Eligible />
           <Reviews />
           <FAQs />
+          <Footer />
         </main>
       </div>
     </>

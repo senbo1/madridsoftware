@@ -13,7 +13,7 @@ const links = [
 
 const MainNav: FC = () => {
   return (
-    <nav className='hidden sticky top-0 z-10 bg-white/10 max-w-3xl mx-auto mt-12 py-3 rounded-lg sm:flex items-center justify-center gap-6'>
+    <nav className='hidden sticky top-0 z-20 bg-white/10 max-w-3xl mx-auto mt-12 py-3 rounded-lg md:flex items-center justify-center gap-6'>
       <ul className='flex gap-4'>
         {links.map((link) => (
           <li key={link.name}>

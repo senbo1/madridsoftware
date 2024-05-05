@@ -116,7 +116,7 @@ const Reviews: FC = () => {
               className="relative top-12 -mt-12"
             />
             <div className="bg-[#33373B] w-full pt-14 pb-5 px-4 text-center rounded-xl h-[272px]">
-              <h3 className="font-bold">Shilpa</h3>
+              <h3 className="font-bold">Prerna</h3>
               <img
                 src={comely}
                 alt="comely enterprises logo"

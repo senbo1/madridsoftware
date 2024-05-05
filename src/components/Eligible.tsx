@@ -4,8 +4,8 @@ import eligible from '../assets/eligible.png';
 const Eligible: FC = () => {
   return (
     <section className="bg-[#16171A] shadow-inset">
-      <div className="container max-w-5xl py-16 sm:flex sm:gap-24 px-0">
-        <img src={eligible} alt="A woman using laptop" />
+      <div className="container max-w-5xl py-16 flex flex-col items-center lg:flex-row lg:gap-24">
+        <img src={eligible} alt="A woman using laptop" className='max-w-xs w-full'/>
 
         <div className="flex flex-col gap-8 mt-10">
           <div className="flex flex-col gap-3">

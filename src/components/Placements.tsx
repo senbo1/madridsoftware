@@ -8,7 +8,7 @@ const Placements: FC = () => {
         <span className="text-gradient">Placement Opportunities </span>That
         You&prime;ll Get With Us
       </h2>
-      <div className="flex flex-col sm:flex-row justify-between gap-20">
+      <div className="flex flex-col lg:flex-row justify-between gap-20">
         <div className="flex flex-col">
           <Companies />
         </div>
