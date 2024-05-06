@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 
 const HeroSection: FC = () => {
   return (
-    <section className="flex flex-col sm:flex-row gap-16 p-12 justify-center items-center">
+    <section className="flex flex-col lg:flex-row gap-16 p-12 justify-center items-center">
       <div className="flex flex-col items-start gap-2">
         <p className="text-sm font-semibold bg-[#9FFF00] text-[#07334B] p-1 px-2 rounded-md ">
           #BestSeller
@@ -29,7 +29,7 @@ const HeroSection: FC = () => {
           IBM Certification Course
         </h3>
 
-        <div className="flex gap-8 my-4">
+        <div className="flex flex-col sm:flex-row gap-8 my-4">
           <div className='flex flex-col gap-2 '>
             <Button size="lg" className="font-bold">
               Enroll Now
@@ -47,7 +47,7 @@ const HeroSection: FC = () => {
       </div>
 
       <div>
-        <img src={dataAnalytics} alt="dataAnalytics" />
+        <img src={dataAnalytics} alt="dataAnalytics"/>
       </div>
     </section>
   );

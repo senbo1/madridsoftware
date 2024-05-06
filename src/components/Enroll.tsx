@@ -28,7 +28,7 @@ const Enroll: FC = () => {
             dynamic world of data analytics.
           </p>
 
-          <div className="flex gap-8">
+          <div className="flex flex-col sm:flex-row gap-8">
             <div className="flex flex-col gap-4 max-w-[280px]">
               <div className="flex gap-4">
                 <p className="rounded-full h-full w-[6px] gradient-3"></p>

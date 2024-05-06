@@ -37,7 +37,7 @@ const Reviews: FC = () => {
         </p>
       </div>
 
-      <Carousel opts={{ align: 'start' }} className="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
+      <Carousel opts={{ align: 'start' }} className="max-w-60 sm:max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
         <CarouselContent>
           <CarouselItem className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 flex flex-col items-center">
             <img

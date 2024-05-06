@@ -5,8 +5,8 @@ import { FiChevronsRight } from 'react-icons/fi';
 
 const Learning: FC = () => {
   return (
-    <section className="container max-w-6xl py-6 mt-16 flex flex-col gap-10 sm:flex-row items-center sm:justify-between">
-      <div className="flex flex-col gap-4 items-start order-2 sm:order-none">
+    <section className="container max-w-6xl py-12 mt-16 flex flex-col gap-10 lg:flex-row items-center lg:justify-between">
+      <div className="flex flex-col gap-4 items-start order-2 lg:order-none">
         <h2 className="font-bold text-3xl">
           Tools Selected by <br />
           Industry Professionals

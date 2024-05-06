@@ -8,7 +8,7 @@ const Benefits: FC = () => {
       <h2 className="text-[32px] font-bold">
         Explore the Data Analytics Program
       </h2>
-      <div className="sm:flex gap-14">
+      <div className="flex flex-col lg:flex-row items-center gap-14">
         <div className="flex flex-col gap-11">
           <p className="text-neutral-400">
             Enroll in Madrid Software's Data Analytics course to master data
@@ -17,7 +17,7 @@ const Benefits: FC = () => {
             technologies.
           </p>
 
-          <div className="flex gap-24">
+          <div className="flex flex-col gap-10 lg:flex-row lg:gap-24">
             <div className="flex flex-col gap-4">
               <h4 className="font-semibold flex gap-3 items-center">
                 <IoIosCheckmarkCircle fill="#7ABD6E" className="h-5 w-8" />
@@ -39,7 +39,7 @@ const Benefits: FC = () => {
             </div>
           </div>
 
-          <div className="flex gap-24">
+          <div className="flex flex-col gap-10 lg:flex-row lg:gap-24">
             <div className="flex flex-col gap-4">
               <h4 className="font-semibold flex gap-3 items-center">
                 <IoIosCheckmarkCircle fill="#7ABD6E" className="h-5 w-8" />

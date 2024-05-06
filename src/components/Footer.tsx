@@ -19,7 +19,7 @@ const Footer: FC = () => {
                 programs, workshops, community events, industry news, articles,
                 and special reports—all directly to your inbox!
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <input
                   type="text"
                   placeholder="Enter your email"
@@ -57,7 +57,7 @@ const Footer: FC = () => {
             </div>
           </div>
 
-          <div className="flex gap-20 order-1">
+          <div className="flex gap-10 md:gap-20 order-1">
             <div className="space-y-8">
               <h3 className="text-xl font-bold">Tools</h3>
               <ul className="space-y-4">

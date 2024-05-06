@@ -24,15 +24,15 @@ const Placements: FC = () => {
           </p>
           <div className="flex gap-9">
             <div>
-              <h2 className='text-[64px] font-bold font-barlowc'>500+</h2>
+              <h2 className='text-3xl sm:text-5xl lg:text-[64px] font-bold font-barlowc'>500+</h2>
               <p className='text-neutral-400'>Hiring Partners</p>
             </div>
             <div>
-              <h2 className='text-[64px] font-bold font-barlowc'>100%</h2>
+              <h2 className='text-3xl md:text-5xl lg:text-[64px] font-bold font-barlowc'>100%</h2>
               <p className='text-neutral-400'>Placement Assistance</p>
             </div>
             <div>
-              <h2 className='text-[64px] font-bold font-barlowc'>9.5LPA</h2>
+              <h2 className='text-3xl md:text-5xl lg:text-[64px] font-bold font-barlowc'>9.5LPA</h2>
               <p className='text-neutral-400'>Highest CTC</p>
             </div>
           </div>

@@ -129,7 +129,7 @@ const Curriculum: FC = () => {
       <h2 className="text-[32px] font-bold">Curriculum Overview</h2>
 
       <div className="flex flex-col gap-8">
-        <div className="flex flex-col lg:flex-row gap-8">{renderButtons()}</div>
+        <div className="flex flex-col xl:flex-row gap-8">{renderButtons()}</div>
         <div
           className={cn('hidden bg-[#33373B]', {
             block: activeTab === Section.Introduction,

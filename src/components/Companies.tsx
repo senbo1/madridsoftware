@@ -3,7 +3,7 @@ import companyLogos from '@/lib/Companylogos';
 
 const Companies: FC = () => {
   return (
-    <div className='flex flex-col gap-4 lg:gap-8'>
+    <div className='flex flex-col gap-4 items-center lg:gap-8'>
       {companyLogos.map((row, rowIndex) => (
         <div
           key={rowIndex}
@@ -14,7 +14,7 @@ const Companies: FC = () => {
               key={`${rowIndex}-${logoIndex}`}
               src={logo}
               alt={`Company Logo ${rowIndex * 6 + logoIndex + 1}`}
-              
+              className='w-9 sm:w-auto'  
             />
           ))}
         </div>
