@@ -37,9 +37,9 @@ const Reviews: FC = () => {
         </p>
       </div>
 
-      <Carousel opts={{ align: 'start' }} className="w-full">
+      <Carousel opts={{ align: 'start' }} className="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
         <CarouselContent>
-          <CarouselItem className="basis-1/2 sm:basis-1/4 flex flex-col items-center">
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 flex flex-col items-center">
             <img
               src={shilpa}
               alt="shilpa profile picture"
@@ -64,7 +64,7 @@ const Reviews: FC = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="basis-1/2 sm:basis-1/4 flex flex-col items-center">
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 flex flex-col items-center">
             <img
               src={rahul}
               alt="rahul profile picture"
@@ -87,7 +87,7 @@ const Reviews: FC = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="basis-1/2 sm:basis-1/4 flex flex-col items-center">
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 flex flex-col items-center">
             <img
               src={mudita}
               alt="mudita profile picture"
@@ -109,7 +109,7 @@ const Reviews: FC = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="basis-1/2 sm:basis-1/4 flex flex-col items-center">
+          <CarouselItem className="md-basis-1/2 lg:basis-1/3 xl:basis-1/4 flex flex-col items-center">
             <img
               src={prerna}
               alt="prerna profile picture"
@@ -134,7 +134,7 @@ const Reviews: FC = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="basis-1/2 sm:basis-1/4 flex flex-col items-center">
+          <CarouselItem className="lg:basis-1/4 flex flex-col items-center">
             <img
               src={shilpa}
               alt="shilpa profile picture"
