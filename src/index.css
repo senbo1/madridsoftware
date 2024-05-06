@@ -85,7 +85,7 @@
   }
 
   .scrollbar::-webkit-scrollbar-track {
-    @apply bg-transparent; 
+    @apply bg-neutral-700 
   }
 
   .scrollbar::-webkit-scrollbar-thumb {
@@ -96,10 +96,9 @@
     @apply bg-gray-700 rounded-full; 
   }
 
-  /* For Firefox */
   .scrollbar {
     scrollbar-width: thin; 
-    scrollbar-color: theme('colors.gray.500') transparent;
+    scrollbar-color: theme('colors.gray.500') #3f3f46;
   }
 }
 
