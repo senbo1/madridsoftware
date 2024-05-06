@@ -8,7 +8,7 @@ import {
 
 const FAQs: FC = () => {
   return (
-    <section className="container max-w-[800px] py-12 flex flex-col items-center gap-16">
+    <section id='faqs' className="container max-w-[800px] py-12 flex flex-col items-center gap-16">
       <div className="space-y-4 text-center">
         <h2 className="font-bold text-5xl text-neutral-300">
           Need Further Clarification?
