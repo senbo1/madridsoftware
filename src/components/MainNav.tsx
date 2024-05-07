@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 
 const links = [
-  { name: 'Overview', href: '#overview' },
+  { name: 'Overview', href: '#placements' },
   { name: 'Benefits', href: '#benefits' },
   { name: 'Curriculum', href: '#curriculum' },
   { name: 'Projects', href: '#projects' },
