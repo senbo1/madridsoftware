@@ -12,7 +12,7 @@ const links = [
 
 const Header: FC = () => {
   return (
-    <header className="backdrop-blur-md bg-slate-700 p-2 px-4 drop-shadow-2xl rounded-b-lg">
+    <header className="backdrop-blur-md bg-white/5 p-2 px-4 shadow-lg rounded-b-lg relative z-20" >
       <div className="max-w-6xl mx-auto p-2 flex justify-between items-center">
         <div className="flex gap-12 items-center">
           <h1>
