@@ -74,15 +74,20 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "loop-scroll": {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
+        "loop-scroll-right": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0%)" },
         },
+        "loop-scroll-left": {
+          from : { transform: "translateX(0%)" },
+          to : { transform: "translateX(-100%)" },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "loop-scroll": "loop-scroll 5s linear infinite",
+        "loop-scroll-left": "loop-scroll-left 10s linear infinite",
+        "loop-scroll-right": "loop-scroll-right 10s linear infinite",
       },
     },
   },
