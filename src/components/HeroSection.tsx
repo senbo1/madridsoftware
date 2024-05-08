@@ -13,7 +13,7 @@ const HeroSection: FC = () => {
         muted
         loop
         playsInline
-        className="w-full object-cover absolute lg:h-[620px] -top-[72px] opacity-10"
+        className="w-full object-cover absolute h-screen sm:h-[600px] lg:h-[620px] -top-[72px] opacity-10"
       />
       <div className="flex flex-col lg:flex-row gap-16 p-12 justify-center items-center relative z-10 backdrop-blur-sm">
         <div className="flex flex-col items-start gap-2">
@@ -56,7 +56,7 @@ const HeroSection: FC = () => {
           </div>
         </div>
 
-        <div>
+        <div className='hidden lg:block'>
           <img src={dataAnalytics} alt="dataAnalytics" />
         </div>
       </div>

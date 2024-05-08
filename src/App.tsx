@@ -8,7 +8,7 @@ import Placements from './components/Placements';
 import Enroll from './components/Enroll';
 import Projects from './components/Projects';
 import Eligible from './components/Eligible';
-import Reviews from './components/Reviews';
+import Testimonials from './components/Testimonials';
 import FAQs from './components/FAQs';
 import Footer from './components/Footer';
 import Curriculum from './components/Curriculum';
@@ -29,7 +29,7 @@ function App() {
           <Enroll />
           <Projects />
           <Eligible />
-          <Reviews />
+          <Testimonials />
           <FAQs />
           <Footer />
         </main>

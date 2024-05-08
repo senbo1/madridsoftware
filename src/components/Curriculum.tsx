@@ -104,11 +104,12 @@ const Curriculum: FC = () => {
           ))}
         </ul>
         <ul className="max-w-md w-full pt-4">
-          {activeModule.classes.map((cls) => (
+          {activeModule.classes.map((cls, index) => (
             <li
               className={cn(
                 'flex justify-between items-center text-white w-full p-4 border-b-2 border-[#2A2E31]'
               )}
+              key={index}
             >
               {cls}
               <div className="bg-white/20 rounded-full p-1.5">

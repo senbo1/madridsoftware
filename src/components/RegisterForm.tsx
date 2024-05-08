@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 
 const Form: FC = () => {
   return (
-    <section className="bg-[#191B2C] flex flex-col items-center p-10 gap-4">
+    <section className="bg-[#191B2C] flex flex-col items-center p-10 gap-4 z-10">
       <p className="text-xl">
         Journey of a successful{' '}
         <span className="font-bold">UI/UX Designer</span> is waiting for you.

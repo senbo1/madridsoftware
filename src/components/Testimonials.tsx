@@ -20,7 +20,7 @@ import pitch from '../assets/reviews/pitch.svg';
 import appnox from '../assets/reviews/appnox.svg';
 import comely from '../assets/reviews/comely.svg';
 
-const Reviews: FC = () => {
+const Testimonials: FC = () => {
   return (
     <section className="container max-w-6xl py-12 flex flex-col items-center gap-16">
       <div className="flex flex-col gap-4 text-center">
@@ -36,8 +36,10 @@ const Reviews: FC = () => {
           training.
         </p>
       </div>
-
-      <Carousel opts={{ align: 'start' }} className="max-w-60 sm:max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
+      <Carousel
+        opts={{ align: 'start', loop: true }}
+        className="max-w-60 sm:max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-5xl"
+      >
         <CarouselContent>
           <CarouselItem className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 flex flex-col items-center">
             <img
@@ -109,7 +111,7 @@ const Reviews: FC = () => {
             </div>
           </CarouselItem>
 
-          <CarouselItem className="md-basis-1/2 lg:basis-1/3 xl:basis-1/4 flex flex-col items-center">
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 flex flex-col items-center">
             <img
               src={prerna}
               alt="prerna profile picture"
@@ -133,31 +135,6 @@ const Reviews: FC = () => {
               </p>
             </div>
           </CarouselItem>
-
-          <CarouselItem className="lg:basis-1/4 flex flex-col items-center">
-            <img
-              src={shilpa}
-              alt="shilpa profile picture"
-              className="relative top-12 -mt-12"
-            />
-            <div className="bg-[#33373B] w-full pt-14 pb-5 px-4 text-center rounded-xl">
-              <h3 className="font-bold">Shilpa</h3>
-              <img
-                src={flashcube}
-                alt="flashcube"
-                className="w-14 h-9 mx-auto"
-              />
-              <p className="font-bold text-xs text-white/40">
-                FlashCube IT Services Pvt. Ltd.
-              </p>
-              <p className="text-xs text-white/40">(8 LPA)</p>
-              <img src={rating} alt="rating" className="w-32 h-6 mx-auto" />
-              <p className="text-xs mt-4">
-                Madrid Solution catapulted my career journey, equipping me with
-                the skills to transition into a successful UX/UI designer.
-              </p>
-            </div>
-          </CarouselItem>
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
@@ -166,4 +143,4 @@ const Reviews: FC = () => {
   );
 };
 
-export default Reviews;
+export default Testimonials;
