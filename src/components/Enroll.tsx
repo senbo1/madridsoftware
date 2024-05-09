@@ -1,8 +1,19 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import bgimage from '../assets/Enroll.png';
 import { Button } from './ui/button';
+import EnrollModal from './EnrollModal';
 
 const Enroll: FC = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setModalOpen(false);
+  }
+
   return (
     <section
       style={{
@@ -77,9 +88,10 @@ const Enroll: FC = () => {
             </div>
           </div>
 
-          <Button size={'lg'} className="font-bold text-xl">
+          <Button size={'lg'} className="font-bold text-xl" onClick={openModal}>
             Enroll Now
           </Button>
+          <EnrollModal isOpen={isModalOpen} onClose={closeModal}/>
         </div>
       </div>
     </section>

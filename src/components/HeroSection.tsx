@@ -1,10 +1,21 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { Button } from './ui/button';
 import dataAnalytics from '../assets/data-analytics.png';
 import ibmlogo from '../assets/IBM-logo.png';
 import background from '../assets/HeroBackground.mp4';
+import EnrollModal from './EnrollModal';
 
 const HeroSection: FC = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setModalOpen(false);
+  }
+
   return (
     <section id="overview" className="relative">
       <video
@@ -41,9 +52,10 @@ const HeroSection: FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-8 my-4">
             <div className="flex flex-col gap-2 ">
-              <Button size="lg" className="font-bold">
+              <Button size="lg" className="font-bold" onClick={openModal}>
                 Enroll Now
               </Button>
+              <EnrollModal isOpen={isModalOpen} onClose={closeModal}/>
               <p className="text-xs text-neutral-300">*EMI Options Available</p>
             </div>
             <Button

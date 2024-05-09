@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
+import EnrollModal from './EnrollModal';
 
 const links = [
   { name: 'Overview', href: '#placements' },
@@ -13,6 +14,15 @@ const links = [
 
 const MainNav: FC = () => {
   const [activeLink, setActiveLink] = useState<string>(links[0].name);
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
@@ -37,17 +47,25 @@ const MainNav: FC = () => {
               {link.name}
             </a>
             <p
-              className={cn('hidden w-14 bg-blue h-1 relative top-5 rounded-t-lg', {
-                block: activeLink === link.name,
-              })}
+              className={cn(
+                'hidden w-14 bg-blue h-1 relative top-5 rounded-t-lg',
+                {
+                  block: activeLink === link.name,
+                }
+              )}
             ></p>
           </li>
         ))}
       </ul>
 
-      <Button size="sm" className="px-14 py-5 font-bold text-[12px] rounded-lg">
+      <Button
+        size="sm"
+        className="px-14 py-5 font-bold text-[12px] rounded-lg"
+        onClick={openModal}
+      >
         Enroll Now
       </Button>
+      <EnrollModal isOpen={isModalOpen} onClose={closeModal} />
     </nav>
   );
 };
