@@ -2,6 +2,8 @@ import { cn } from '@/lib/utils';
 import { FC, useState } from 'react';
 import { FaChevronRight } from 'react-icons/fa6';
 import { FaLock } from 'react-icons/fa';
+import { Button } from './ui/button';
+import { FiDownload } from "react-icons/fi";
 
 enum Section {
   Introduction = 'Introduction',
@@ -75,15 +77,15 @@ const Curriculum: FC = () => {
 
   const renderModules = (modules: Module[]) => {
     return (
-      <div className="flex">
-        <ul className="max-w-2xl w-full max-h-[475px] overflow-scroll overflow-x-hidden scrollbar">
+      <div className="flex flex-col sm:flex-row w-[350px] sm:w-auto">
+        <ul className="max-w-2xl w-full max-h-[475px] flex sm:flex-col overflow-scroll sm:overflow-x-hidden scrollbar">
           {modules.map((mod) => (
             <li
               key={mod.id}
               className={cn(
                 'flex items-center justify-between px-7 py-5 border-bottom',
                 {
-                  'text-blue border-l-[3px] border-blue':
+                  'text-blue border-t-[3px] sm:border-l-[3px] sm:border-t-[0px] border-blue':
                     activeModule.id === mod.id,
                 }
               )}
@@ -92,18 +94,18 @@ const Curriculum: FC = () => {
               <div>
                 <p className="text-xs font-bold">Module {mod.id}</p>
                 <h4
-                  className={cn('text-xl font-bold text-[#A1A8AC]', {
+                  className={cn('sm:text-xl font-bold text-[#A1A8AC]', {
                     'text-blue': activeModule.id === mod.id,
                   })}
                 >
                   {mod.title}
                 </h4>
               </div>
-              <FaChevronRight />
+              <FaChevronRight className="hidden sm:inline" />
             </li>
           ))}
         </ul>
-        <ul className="max-w-md w-full pt-4">
+        <ul className="max-w-md w-full pt-4 overflow-scroll overflow-x-hidden scrollbar">
           {activeModule.classes.map((cls, index) => (
             <li
               className={cn(
@@ -187,6 +189,11 @@ const Curriculum: FC = () => {
           {renderModules(modules)}
         </div>
       </div>
+
+      <Button size="lg" className="px-10 py-5 font-bold rounded-md">
+        Download Curriculum
+        <FiDownload className='ml-2 w-6 h-6'/>
+      </Button>
     </section>
   );
 };
