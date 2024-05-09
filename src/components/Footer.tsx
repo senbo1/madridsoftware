@@ -25,7 +25,7 @@ const Footer: FC = () => {
                   placeholder="Enter your email"
                   className="text-black py-3 pr-16 pl-7 rounded-full "
                 />
-                <button className="bg-blue font-bold p-4 rounded-full flex items-center justify-center">
+                <button className="bg-blue font-bold p-4 pl-6 rounded-full flex items-center justify-center">
                   Subscribe
                   <FiChevronsRight className="ml-1 h-6 w-6" />
                 </button>

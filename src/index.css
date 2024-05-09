@@ -129,8 +129,11 @@
 }
 
 .gradient-outline {
+  background-color: transparent;
   border: 2px solid;
-  border-image-source: linear-gradient(91.74deg, #0db0ff 1.47%, #9747ff 77.27%);
+  border-image: linear-gradient(91.74deg, #0db0ff 1.47%, #9747ff 77.27%);
+  border-image-slice: 1;
+  border-radius: 7px;
 }
 
 .border-bottom {
@@ -148,22 +151,29 @@
 
 .fade-container::before,
 .fade-container::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
-  height: 50px; 
+  height: 50px;
   pointer-events: none;
   z-index: 2;
 }
 
 .fade-container::before {
   top: 0;
-  background: linear-gradient(to bottom, rgba(30, 32, 35, 0.8), rgba(30, 32, 35, 0) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 32, 35, 0.8),
+    rgba(30, 32, 35, 0) 100%
+  );
 }
 
 .fade-container::after {
   bottom: 0;
-  background: linear-gradient(to top, rgba(30, 32, 35, 0.8) 0%, rgba(30, 32, 35, 0) 100%);
+  background: linear-gradient(
+    to top,
+    rgba(30, 32, 35, 0.8) 0%,
+    rgba(30, 32, 35, 0) 100%
+  );
 }
-

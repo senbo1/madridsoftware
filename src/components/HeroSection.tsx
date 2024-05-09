@@ -4,17 +4,18 @@ import dataAnalytics from '../assets/data-analytics.png';
 import ibmlogo from '../assets/IBM-logo.png';
 import background from '../assets/HeroBackground.mp4';
 import EnrollModal from './EnrollModal';
+import { FiChevronsRight } from 'react-icons/fi';
 
 const HeroSection: FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
     setModalOpen(true);
-  }
+  };
 
   const closeModal = () => {
     setModalOpen(false);
-  }
+  };
 
   return (
     <section id="overview" className="relative">
@@ -54,21 +55,22 @@ const HeroSection: FC = () => {
             <div className="flex flex-col gap-2 ">
               <Button size="lg" className="font-bold" onClick={openModal}>
                 Enroll Now
+                <FiChevronsRight className="w-6 h-6 ml-1" />
               </Button>
-              <EnrollModal isOpen={isModalOpen} onClose={closeModal}/>
+              <EnrollModal isOpen={isModalOpen} onClose={closeModal} />
               <p className="text-xs text-neutral-300">*EMI Options Available</p>
             </div>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-gradient font-bold"
-            >
-              Download Syllabus
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-gradient font-bold rounded-md"
+              >
+                Download Syllabus
+              </Button>
           </div>
         </div>
 
-        <div className='hidden lg:block'>
+        <div className="hidden lg:block">
           <img src={dataAnalytics} alt="dataAnalytics" />
         </div>
       </div>
