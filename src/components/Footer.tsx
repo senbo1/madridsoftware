@@ -5,6 +5,7 @@ import { FaLinkedinIn } from 'react-icons/fa6';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import logo from '../assets/logo.svg';
+import { Button } from './ui/button';
 
 const Footer: FC = () => {
   return (
@@ -25,10 +26,10 @@ const Footer: FC = () => {
                   placeholder="Enter your email"
                   className="text-black py-3 pr-16 pl-7 rounded-full "
                 />
-                <button className="bg-blue font-bold p-4 pl-6 rounded-full flex items-center justify-center">
+                <Button className='text-base py-7 px-6 pl-8 rounded-full flex items-center justify-center gap-1'>
                   Subscribe
-                  <FiChevronsRight className="ml-1 h-6 w-6" />
-                </button>
+                  <FiChevronsRight className="h-6 w-6" />
+                </Button>
               </div>
             </div>
 
@@ -40,7 +41,10 @@ const Footer: FC = () => {
                 >
                   <GrInstagram />
                 </a>
-                <a href="" target="_blank">
+                <a
+                  href="https://www.linkedin.com/company/madrid-software/"
+                  target="_blank"
+                >
                   <FaLinkedinIn />
                 </a>
                 <a

@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import logo from '../assets/logo.svg';
 import { IoClose } from 'react-icons/io5';
+import { Input } from './ui/input';
+import { Button } from './ui/button';
 
 interface ModalProps {
   isOpen: boolean;
@@ -11,7 +13,7 @@ const EnrollModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [isModalOpen, setModalOpen] = useState(isOpen);
   const modalRef = useRef<HTMLDialogElement | null>(null);
   const fullNameRef = useRef<HTMLInputElement | null>(null);
-  
+
   useEffect(() => {
     setModalOpen(isOpen);
   }, [isOpen]);
@@ -41,58 +43,41 @@ const EnrollModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   return (
     <dialog
       ref={modalRef}
-      className="modal max-w-lg w-full py-8 px-16 rounded-3xl bg-[#F2F5F9]"
+      className="modal max-w-lg w-full py-8 px-16 rounded-3xl bg-[#19223D] text-white backdrop-opacity-75"
       onKeyDown={handleKeyDown}
     >
       <button onClick={handleCloseModal} className="absolute top-8 right-8">
-        <IoClose className='w-8 h-8'/>
+        <IoClose className="w-8 h-8" />
       </button>
       <div className="flex flex-col justify-center items-center gap-8">
         <img src={logo} alt="madrid software logo" />
         <form className="max-w-md w-full flex flex-col gap-8">
           <div>
-            <label htmlFor="full_name" className="mb-2">
-              Full Name<span className="text-red-600 font-bold ml-1">*</span>
+            <label htmlFor="full_name" className="mb-2 text-white">
+              Full Name<span className="text-red-700 font-bold ml-1">*</span>
             </label>
-            <input
+            <Input
               type="text"
               id="full_name"
               name="full_name"
               ref={fullNameRef}
-              className="border border-gray-300 focus:border-blue rounded-xl p-2 px-3 w-full focus:outline-none"
               required
+              className='rounded-xl'
             />
           </div>
           <div>
             <label htmlFor="phone" className="mb-2">
-              Phone<span className="text-red-600 font-bold ml-1">*</span>
+              Phone<span className="text-red-700 font-bold ml-1">*</span>
             </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              className="border border-gray-300 focus:border-blue rounded-xl p-2 px-3 w-full focus:outline-none"
-              required
-            />
+            <Input type="tel" id="phone" name="phone" required className='rounded-xl'/>
           </div>
           <div>
             <label htmlFor="email" className="mb-2">
-              Email<span className="text-red-600 font-bold ml-1">*</span>
+              Email<span className="text-red-700 font-bold ml-1">*</span>
             </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="border border-gray-300 focus:border-blue rounded-xl p-2 px-3 w-full focus:outline-none"
-              required
-            />
+            <Input type="email" id="email" name="email" required className='rounded-xl'/>
           </div>
-          <button
-            type="submit"
-            className="bg-blue text-white w-full px-4 py-2 rounded-full hover:bg-blue/80 focus:outline-none"
-          >
-            Submit
-          </button>
+          <Button className='rounded-xl py-5' variant={'gradient-2'}>Submit</Button>
         </form>
       </div>
     </dialog>

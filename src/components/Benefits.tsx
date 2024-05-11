@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
-import dataExplore from '../assets/data-explore.png';
+import data from '../assets/data.gif';
 
 const Benefits: FC = () => {
   return (
@@ -63,7 +63,7 @@ const Benefits: FC = () => {
           </div>
         </div>
         <div>
-          <img src={dataExplore} alt="dataExplore" />
+          <img src={data} alt="dataExplore" />
         </div>
       </div>
     </section>

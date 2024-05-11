@@ -22,7 +22,7 @@ import comely from '../assets/reviews/comely.svg';
 
 const Testimonials: FC = () => {
   return (
-    <section className="container max-w-6xl py-12 flex flex-col items-center gap-16">
+    <section id="testimonials" className="container max-w-6xl py-12 flex flex-col items-center gap-16">
       <div className="flex flex-col gap-4 text-center">
         <h2 className="font-bold text-[32px]">
           <span className="text-gradient">Madrid Software</span> Shines Bright

@@ -4,11 +4,11 @@ import { cn } from '@/lib/utils';
 import EnrollModal from './EnrollModal';
 
 const links = [
-  { name: 'Overview', href: '#placements' },
+  { name: 'Placements', href: '#placements' },
   { name: 'Benefits', href: '#benefits' },
   { name: 'Curriculum', href: '#curriculum' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Placements', href: '#placements' },
+  { name: 'Testimonials', href: '#testimonials'},
   { name: 'FAQs', href: '#faqs' },
 ];
 

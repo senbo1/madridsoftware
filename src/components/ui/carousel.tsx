@@ -2,6 +2,7 @@ import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
+import AutoPlay from "embla-carousel-autoplay"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 
@@ -62,7 +63,7 @@ const Carousel = React.forwardRef<
         ...opts,
         axis: orientation === "horizontal" ? "x" : "y",
       },
-      plugins
+      [AutoPlay({ playOnInit: true, delay: 3500 }), ...(plugins || [])],
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
@@ -84,6 +85,7 @@ const Carousel = React.forwardRef<
       api?.scrollNext()
     }, [api])
 
+    
     const handleKeyDown = React.useCallback(
       (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === "ArrowLeft") {
@@ -109,7 +111,12 @@ const Carousel = React.forwardRef<
       if (!api) {
         return
       }
-
+      
+      const autoplay = api?.plugins().autoplay
+      if (autoplay) {
+        autoplay.play()
+      }
+      
       onSelect(api)
       api.on("reInit", onSelect)
       api.on("select", onSelect)

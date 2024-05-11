@@ -119,6 +119,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.gradient-1 {
+  background: linear-gradient(91.74deg, #0DB0FF 1.47%, #9747FF 77.27%);
+}
+
 .gradient-2 {
   background: linear-gradient(
     98.97deg,
@@ -129,11 +133,24 @@
 }
 
 .gradient-outline {
-  background-color: transparent;
-  border: 2px solid;
-  border-image: linear-gradient(91.74deg, #0db0ff 1.47%, #9747ff 77.27%);
-  border-image-slice: 1;
-  border-radius: 7px;
+  position: relative;
+}
+
+.gradient-outline::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px; 
+  padding: 2px; 
+  background:linear-gradient(91.74deg, #0db0ff 1.47%, #9747ff 77.27%);
+  mask: 
+    linear-gradient(#fff 0 0), 
+    linear-gradient(#fff 0 0);
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
 }
 
 .border-bottom {
@@ -176,4 +193,9 @@
     rgba(30, 32, 35, 0.8) 0%,
     rgba(30, 32, 35, 0) 100%
   );
+}
+
+dialog::backdrop {
+  background-color: black;
+  opacity: 0.5;
 }

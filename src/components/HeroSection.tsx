@@ -60,13 +60,11 @@ const HeroSection: FC = () => {
               <EnrollModal isOpen={isModalOpen} onClose={closeModal} />
               <p className="text-xs text-neutral-300">*EMI Options Available</p>
             </div>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-gradient font-bold rounded-md"
+              <button
+                className="text-gradient font-bold rounded-md h-12 px-8 gradient-outline"
               >
                 Download Syllabus
-              </Button>
+              </button>
           </div>
         </div>
 

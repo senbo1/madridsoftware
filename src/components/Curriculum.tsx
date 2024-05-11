@@ -4,6 +4,7 @@ import { FaChevronRight } from 'react-icons/fa6';
 import { FaLock } from 'react-icons/fa';
 import { Button } from './ui/button';
 import { FiDownload } from "react-icons/fi";
+import EnrollModal from './EnrollModal';
 
 enum Section {
   Introduction = 'Introduction',
@@ -44,6 +45,16 @@ const Curriculum: FC = () => {
   const [activeTab, setActiveTab] = useState<Section>(Section.Introduction);
   const [activeModule, setActiveModule] = useState<Module>(modules[0]);
 
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setModalOpen(false);
+  }
+  
   const handleTabClick = (tab: Section) => {
     setActiveTab(tab);
     setActiveModule(modules[0]);
@@ -190,10 +201,11 @@ const Curriculum: FC = () => {
         </div>
       </div>
 
-      <Button size="lg" className="px-10 py-5 font-bold rounded-md">
+      <Button size="lg" className="px-10 py-6 font-bold rounded-md" onClick={openModal}>
         Download Curriculum
         <FiDownload className='ml-2 w-6 h-6'/>
       </Button>
+      <EnrollModal isOpen={isModalOpen} onClose={closeModal}/>
     </section>
   );
 };

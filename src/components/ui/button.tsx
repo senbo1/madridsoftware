@@ -10,8 +10,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: 'gradient-2 text-white',
-        destructive:
-          'bg-destructive text-destructive-foreground hover:bg-destructive/90',
+        'gradient-2':
+          'gradient-1 text-white',
         outline:
           'border-2 border-solid border-gradient-to-r from-cyan-500 to-purple-500',
         secondary:

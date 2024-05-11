@@ -18,6 +18,8 @@ const Enroll: FC = () => {
     <section
       style={{
         backgroundImage: `url(${bgimage})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
       }}
     >
       <div
