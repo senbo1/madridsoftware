@@ -1,9 +1,20 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import learning from '../assets/learning.png';
 import { Button } from './ui/button';
 import { FiChevronsRight } from 'react-icons/fi';
+import EnrollModal from './EnrollModal';
 
 const Learning: FC = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <section className="container max-w-6xl py-12 mt-16 flex flex-col gap-10 lg:flex-row items-center lg:justify-between">
       <div className="flex flex-col gap-4 items-start order-2 lg:order-none">
@@ -17,12 +28,14 @@ const Learning: FC = () => {
           training, positioning you to dominate and succeed in <br />
           today's competitive landscape.
         </p>
-        <Button size="lg" className="mt-4 px-16 py-8 text-xl font-bold">
+        <Button size="lg" className="mt-4 px-16 py-8 text-xl font-bold" onClick={openModal}>
           Start Learning
-          <FiChevronsRight className='ml-2 h-6 w-6' />
+          <FiChevronsRight className="ml-2 h-6 w-6" />
         </Button>
+
+        <EnrollModal isOpen={isModalOpen} onClose={closeModal} />
       </div>
-      <div className='order-1'>
+      <div className="order-1">
         <img src={learning} alt="learning" />
       </div>
     </section>

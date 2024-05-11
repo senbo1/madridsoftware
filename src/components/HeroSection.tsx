@@ -62,6 +62,7 @@ const HeroSection: FC = () => {
             </div>
               <button
                 className="text-gradient font-bold rounded-md h-12 px-8 gradient-outline"
+                onClick={openModal}
               >
                 Download Syllabus
               </button>
