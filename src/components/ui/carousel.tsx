@@ -112,7 +112,7 @@ const Carousel = React.forwardRef<
         return
       }
       
-      const autoplay = api?.plugins().autoplay
+      const autoplay: any = api?.plugins()?.autoplay
       if (autoplay) {
         autoplay.play()
       }

@@ -4,8 +4,6 @@ import { ChevronRight } from 'lucide-react';
 import { FaPhoneAlt } from 'react-icons/fa';
 import logo from '../assets/logo.svg';
 import EnrollModal from './EnrollModal';
-import { ReactSVG } from "react-svg";
-
 
 const links = [
   { name: 'Overview', href: '#curriculum' },
