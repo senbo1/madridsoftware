@@ -43,7 +43,7 @@ const EnrollModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   return (
     <dialog
       ref={modalRef}
-      className="modal max-w-lg w-full py-8 px-16 rounded-3xl bg-[#19223D] text-white backdrop-opacity-75"
+      className="modal max-w-lg w-full py-8 px-16 rounded-3xl bg-[#19223D] text-white"
       onKeyDown={handleKeyDown}
     >
       <button onClick={handleCloseModal} className="absolute top-8 right-8">

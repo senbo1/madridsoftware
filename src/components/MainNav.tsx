@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 import EnrollModal from './EnrollModal';
@@ -8,12 +8,12 @@ const links = [
   { name: 'Benefits', href: '#benefits' },
   { name: 'Curriculum', href: '#curriculum' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Testimonials', href: '#testimonials'},
+  { name: 'Testimonials', href: '#testimonials' },
   { name: 'FAQs', href: '#faqs' },
 ];
 
 const MainNav: FC = () => {
-  const [activeLink, setActiveLink] = useState<string>(links[0].name);
+  const [activeLink, setActiveLink] = useState<string>(links[0].name.toLowerCase());
   const [isModalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
@@ -26,21 +26,41 @@ const MainNav: FC = () => {
 
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
+    
     const targetId = event.currentTarget.getAttribute('href');
     const targetElement = document.querySelector(targetId!);
     targetElement?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    setActiveLink(event.currentTarget.textContent!);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = Array.from(
+        document.querySelectorAll('section[id]')
+      ) as HTMLElement[];
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          setActiveLink(section.id);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="hidden sticky top-0 z-20 bg-white/10 max-w-[700px] mx-auto mt-12 py-3 rounded-lg lg:flex items-center justify-center gap-8 backdrop-blur-md">
+    <nav className="hidden sticky top-8 z-20 bg-white/10 max-w-[700px] mx-auto mt-12 py-3 rounded-lg lg:flex items-center justify-center gap-8 backdrop-blur-md">
       <ul className="flex gap-4">
         {links.map((link) => (
           <li key={link.name} className="flex flex-col items-center">
             <a
               href={link.href}
-              className={cn('text-sm', {
-                'font-semibold': activeLink === link.name,
+              className={cn('text-sm transition-all duration-150', {
+                'font-semibold': activeLink === link.name.toLowerCase(),
               })}
               onClick={handleClick}
             >
@@ -48,9 +68,9 @@ const MainNav: FC = () => {
             </a>
             <p
               className={cn(
-                'hidden w-14 bg-blue h-1 relative top-5 rounded-t-lg',
+                'hidden w-14 bg-blue h-1 relative top-5 rounded-t-lg transition-all duration-150',
                 {
-                  block: activeLink === link.name,
+                  block: activeLink === link.name.toLowerCase(),
                 }
               )}
             ></p>

@@ -5,9 +5,9 @@ const Placements: FC = () => {
   return (
     <section
       id="placements"
-      className="container max-w-6xl py-12 my-16 flex flex-col items-center gap-16"
+      className="container max-w-6xl py-6 mb-8 flex flex-col items-center gap-16"
     >
-      <h2 className="text-[32px] font-bold tracking-wide">
+      <h2 className="text-[32px] font-bold tracking-wide mt-20">
         <span className="text-gradient">Placement Opportunities </span>That
         You&prime;ll Get With Us
       </h2>

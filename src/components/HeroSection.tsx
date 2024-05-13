@@ -18,7 +18,7 @@ const HeroSection: FC = () => {
   };
 
   return (
-    <section id="overview" className="relative">
+    <section className="relative">
       <video
         src={background}
         autoPlay

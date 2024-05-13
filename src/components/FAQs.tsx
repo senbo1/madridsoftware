@@ -10,7 +10,7 @@ const FAQs: FC = () => {
   return (
     <section id='faqs' className="container max-w-[800px] py-12 flex flex-col items-center gap-16">
       <div className="space-y-4 text-center">
-        <h2 className="font-bold text-5xl text-neutral-300">
+        <h2 className="font-bold text-5xl text-neutral-300 mt-14">
           Need Further Clarification?
         </h2>
         <p className="text-xl text-neutral-400">

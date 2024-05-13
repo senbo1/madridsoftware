@@ -7,7 +7,7 @@ import ecommerce from '../assets/ecommerce.png';
 const Projects: FC = () => {
   return (
     <section id="projects"className="container max-w-6xl py-16 flex flex-col items-center">
-      <h2 className="text-[32px] font-bold mb-16">
+      <h2 className="text-[32px] font-bold mb-16 mt-14">
         Industry Relevant Projects
       </h2>
       <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-8">

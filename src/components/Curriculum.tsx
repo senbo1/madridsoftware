@@ -140,7 +140,7 @@ const Curriculum: FC = () => {
       id="curriculum"
       className="container max-w-6xl py-12 flex flex-col items-center gap-24"
     >
-      <h2 className="text-[32px] font-bold">Curriculum Overview</h2>
+      <h2 className="text-[32px] font-bold mt-14">Curriculum Overview</h2>
 
       <div className="flex flex-col gap-8">
         <div className="flex flex-col xl:flex-row gap-8">{renderButtons()}</div>
